@@ -1,2 +1,26 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<h1>User List</h1>
+<table>
+  <tr>
+    <th>User Name </th>
+    <th>User last Name </th>
+    <th>Mobile Number </th>
+    <th>Mobile Number </th>
+    <th>User Type </th>
+    <th>Avg. Ratings </th>
+    <th>Edit User </th>
+
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.first_name%></td>
+      <td><%=user.last_name %></td>
+      <td><%=user.mobile_num %></td>
+      <td><%=user.mobile_num2 %></td>
+      <td><%=user.user_type %></td>
+      <td>"*****"</td>
+      <%user_link = "Edit  " + user.first_name.to_s  %>
+      <td><%= link_to user_link, edit_user_registration_path, :class => 'navbar-link' %> </td>
+
+    </tr>
+  <% end %>
+</table>
