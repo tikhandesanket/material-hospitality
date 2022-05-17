@@ -1,15 +1,15 @@
-<h1>User List</h1>
+<h1><%=t :user_list %></h1>
 <table>
   <tr>
-    <th>User Name </th>
-    <th>User last Name </th>
-    <th>Mobile Number </th>
-    <th>Mobile Number </th>
-    <th>User Type </th>
-    <th>Avg. Ratings </th>
-    <th>Edit User </th>
-
+    <th><%=t :first_name %></th>
+    <th><%=t :last_name %></th>
+    <th><%=t :mobile_num %></th>
+    <th><%=t :mobile_num2 %></th>
+    <th><%=t :user_type %></th>
+    <th><%=t :avg_ratings %></th>
+    <th><%=t :edit_user %></th
   </tr>
+
   <% @users.each do |user| %>
     <tr>
       <td><%= user.first_name%></td>
@@ -17,8 +17,8 @@
       <td><%=user.mobile_num %></td>
       <td><%=user.mobile_num2 %></td>
       <td><%=user.user_type %></td>
-      <td>"*****"</td>
-      <%user_link = "Edit  " + user.first_name.to_s  %>
+      <td>*****</td>
+      <%user_link = (t :edit_user)   %>
       <td><%= link_to user_link, edit_user_registration_path, :class => 'navbar-link' %> </td>
 
     </tr>

@@ -29,16 +29,15 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  user_list: "User List"
-  first_name: "First Name"
-  last_name: "Last Name"
-  mobile_num: "Mobile Number"
-  mobile_num2: "Mobile Number 2"
-  user_type: "User Type"
-  avg_ratings: "Avg. ratings"
-  edit_user: "Edit User" 
-
+mh:
+  hello: "नमस्कार"
+  user_list: "उपभोक्ता ची यादी"
+  first_name: "पहिले नाव"
+  last_name: "आडनाव"
+  mobile_num: "मोबाइल नंबर"
+  mobile_num2: "इतर मोबाइल नंबर "
+  user_type: "उपभोक्ता प्रकार "
+  avg_ratings: "सरासरी रेटिंग"
+  edit_user: "उपभोक्ता सुधारणे"  
   
 
