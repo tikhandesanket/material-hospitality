@@ -30,6 +30,9 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
+gem 'jsbundling-rails'  # needed for bootstrap javascript
+gem 'cssbundling-rails' # Install bootstrap 5
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

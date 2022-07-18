@@ -4,3 +4,4 @@ Rails.application.routes.draw do
     root "dashboard#index"
   end
 end
+# https://www.uday.net/add-bootstrap-5-to-an-existing-Rails-7-app

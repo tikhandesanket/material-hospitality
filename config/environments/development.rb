@@ -69,5 +69,5 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  # git token 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   https://github.com/settings/tokens
+  # git token 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   https://github.com/settings/tokens
 end
