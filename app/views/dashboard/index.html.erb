@@ -1,19 +1,23 @@
 <!--   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   -->
 <h1><%=t :user_list %></h1>
-<table>
+<table class="table">
+  <thead class="thead-light">
   <tr>
-    <th><%=t :first_name %></th>
-    <th><%=t :last_name %></th>
-    <th><%=t :mobile_num %></th>
-    <th><%=t :mobile_num2 %></th>
-    <th><%=t :user_type %></th>
-    <th><%=t :avg_ratings %></th>
-    <th><%=t :edit_user %></th
+     <th scope="col">Sr.Num</th>
+    <th scope="col"><%=t :first_name %></th>
+    <th scope="col"><%=t :last_name %></th>
+    <th scope="col"><%=t :mobile_num %></th>
+    <th scope="col"><%=t :mobile_num2 %></th>
+    <th scope="col"><%=t :user_type %></th>
+    <th scope="col"><%=t :avg_ratings %></th>
+    <th scope="col"><%=t :edit_user %></th
   </tr>
-
-  <% @users.each do |user| %>
+</thead>
+<tbody>
+  <% @users.each_with_index do |user,index| %>
     <tr>
-      <td><%= user.first_name%></td>
+      <th scope="row"><%=index+1%></th>
+      <td><%= link_to user.first_name, user_show_path(:user_id=>user.id), :class => 'navbar-link' %> </td>
       <td><%=user.last_name %></td>
       <td><%=user.mobile_num %></td>
       <td><%=user.mobile_num2 %></td>
@@ -24,5 +28,38 @@
 
     </tr>
   <% end %>
+  </tbody>
 </table>
 
+
+<!-- <table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+ -->
